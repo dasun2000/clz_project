@@ -41,14 +41,14 @@
             <%}
             
             
-                else if (gr.equals("7"))
+                if (gr.equals("7"))
            {
            
             String q2="SELECT * FROM student7";
             ResultSet rs1=st.executeQuery(q2);%>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+            <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Email</td><td>Contact Number</td><td>Home Number</td></thead>
                 <%while (rs1.next())
             {%>
             <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
@@ -62,7 +62,7 @@
             ResultSet rs1=st.executeQuery(q3);%>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+            <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Email</td><td>Contact Number</td><td>Home Number</td></thead>
                 <%while (rs1.next())
             {%>
             <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
@@ -70,19 +70,7 @@
             <%}
             
             
-            else if(gr.equals("8"))
-           {
-           
-            String q4="SELECT * FROM student8";
-            ResultSet rs1=st.executeQuery(q4);%>
             
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
-                <%while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
-            <%}%></table>
-            <%}
             
             
                 else if (gr.equals("9"))
@@ -92,7 +80,7 @@
             ResultSet rs1=st.executeQuery(q5);%>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+            <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Email</td><td>Contact Number</td><td>Home Number</td></thead>
                 <%while (rs1.next())
             {%>
             <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
@@ -108,7 +96,7 @@
             ResultSet rs1=st.executeQuery(q6);%>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+            <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Email</td><td>Contact Number</td><td>Home Number</td></thead>
                 <%while (rs1.next())
             {%>
             <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
@@ -123,7 +111,7 @@
             ResultSet rs1=st.executeQuery(q7);%>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+            <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Email</td><td>Contact Number</td><td>Home Number</td></thead>
                 <%while (rs1.next())
             {%>
             <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>

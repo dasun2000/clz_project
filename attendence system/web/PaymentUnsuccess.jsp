@@ -27,13 +27,13 @@
            if (gr.equals("6"))
            {
         
-            String q1="SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment6 WHERE No = No)";
+            String q1="SELECT * FROM student6 WHERE NOT EXISTS ( SELECT * FROM Payment6 WHERE No = No)";
             
            
         %>
   
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
+                <thead><td>No</td><td>First Name</td><td>Last Name</td></thead>
                 <%ResultSet rs1=st.executeQuery(q1);
                     while (rs1.next())
             {%>
@@ -52,7 +52,7 @@
         %>
   
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
+                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td></thead>
                 <%ResultSet rs1=st.executeQuery(q1);
                     while (rs1.next())
             {%>
