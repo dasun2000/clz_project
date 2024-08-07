@@ -94,7 +94,7 @@
             <button type="submit">Student List Update</button>
              <input type="hidden" value="<%=gg%>" name="gg">
         </form></td></tr>
-       <tr><td> <form action="grade.jsp">
+       <tr><td> <form action="Grade.jsp">
             <button type="submit">Exit</button>
      
         </form></td></tr>
