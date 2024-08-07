@@ -63,7 +63,7 @@
     </head>
     <body>
          <%
-        String gg=request.getParameter("gr");
+        String gg=request.getParameter("gg");
         
         %>
         
@@ -86,7 +86,11 @@
             <button type="submit">Add New Student</button>
              <input type="hidden" value="<%=gg%>" name="gg">
         </form></td></tr>
-        <tr><td> <form action="stuUp.jsp">
+       <tr><td> <form action="PaymentHome.jsp">
+            <button type="submit">Payment</button>
+             <input type="hidden" value="<%=gg%>" name="gg">
+        </form></td></tr>
+        <tr><td> <form action="Updatestu.jsp">
             <button type="submit">Student List Update</button>
              <input type="hidden" value="<%=gg%>" name="gg">
         </form></td></tr>

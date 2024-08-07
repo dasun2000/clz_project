@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Home
-    Created on : Jul 29, 2024, 2:57:51 PM
+    Document   : PaymentHome
+    Created on : Jul 31, 2024, 12:20:41 PM
     Author     : MSI KATANA
 --%>
 
@@ -8,7 +8,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <style>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -62,7 +64,7 @@
     </style>
     </head>
     <body>
-         <%
+        <%
         String gg=request.getParameter("gg");
         
         %>
@@ -71,33 +73,27 @@
                     <h1>Welcome to Admin Panel</h1></td></tr>
             
             
-            <tr><td><form action="Student.jsp" method="post">
-            
-            
-            <button type="submit">View students list</button>
+            <tr><td><form action="addPayment.jsp" method="post">
+            <button type="submit">Add Payment</button>
                <input type="hidden" value="<%=gg%>" name="gg">
                     </form></td></tr>
-             <tr><td> <form action="SAttend.jsp">
-            <button type="submit">Student Attendance</button>
-            <input type="hidden" value="<%=gg%>" name="gg">
-            
-        </form></td></tr>
-       <tr><td> <form action="Addstu.jsp">
-            <button type="submit">Add New Student</button>
-             <input type="hidden" value="<%=gg%>" name="gg">
-        </form></td></tr>
-       <tr><td> <form action="PaymentHome.jsp">
-            <button type="submit">Payment</button>
-             <input type="hidden" value="<%=gg%>" name="gg">
-        </form></td></tr>
-        <tr><td> <form action="Updatestu.jsp">
-            <button type="submit">Student List Update</button>
-             <input type="hidden" value="<%=gg%>" name="gg">
-        </form></td></tr>
-       <tr><td> <form action="grade.jsp">
-            <button type="submit">Exit</button>
-     
-        </form></td></tr>
-        </table>
-       
+            <tr><td><form action="PaymentSuccess.jsp" method="post">
+ 
+            <button type="submit">Payment Success List</button>
+               <input type="hidden" value="<%=gg%>" name="gg">
+                    </form></td></tr>
+            <tr><td><form action="Student.jsp" method="post">
+            <button type="submit">Payment unSuccess List</button>
+               <input type="hidden" value="<%=gg%>" name="gg">
+                    </form></td></tr>
+            <tr><td><form action="IndexSearch.jsp" method="post">
+            <button type="submit">Search Index</button>
+               <input type="hidden" value="<%=gg%>" name="gg">
+                    </form></td></tr>
+            <tr><td><form action="Student.jsp" method="post">
+            <button type="submit">Clear All Payment</button>
+               <input type="hidden" value="<%=gg%>" name="gg">
+                    </form></td></tr>
+        
+    </body>
 </html>

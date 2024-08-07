@@ -1,23 +1,23 @@
 <%-- 
-    Document   : Student
-    Created on : Jul 29, 2024, 12:14:14 PM
+    Document   : PaymentSuccess
+    Created on : Aug 1, 2024, 12:21:02 PM
     Author     : MSI KATANA
 --%>
 
-<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Student List</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <%
-            
+         <%
+            String index=request.getParameter("index");
             String gr=request.getParameter("gg");
             Class.forName("com.mysql.jdbc.Driver");
             String url="jdbc:mysql://localhost:3306/attendence";
@@ -27,18 +27,31 @@
            if (gr.equals("6"))
            {
         
-            String q1="SELECT * FROM student6";
-            ResultSet rs1=st.executeQuery(q1);
+            String q1="SELECT * FROM Payment";
+            
            
         %>
+       
             
+           
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Email</td><td>Contact Number</td><td>Home Number</td></thead>
-                <%while (rs1.next())
+                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
+                <%ResultSet rs1=st.executeQuery(q1);
+                    while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
-            <%}
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        <%}
             
             
                 else if (gr.equals("7"))
@@ -51,7 +64,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
             <%}
             
@@ -65,23 +78,13 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
-            <%}
             
             
-            else if(gr.equals("8"))
-           {
-           
-            String q4="SELECT * FROM student8";
-            ResultSet rs1=st.executeQuery(q4);%>
-            
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
-                <%while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
-            <%}%></table>
+        
+        
+        
             <%}
             
             
@@ -111,7 +114,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
             <%}
             
@@ -126,7 +129,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
             <%}
             
@@ -136,6 +139,9 @@
                   
                     }
             %>
+            
+            
+            
             
     </body>
 </html>

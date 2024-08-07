@@ -103,7 +103,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <body>\n");
       out.write("         ");
 
-        String gg=request.getParameter("gr");
+        String gg=request.getParameter("gg");
         
         
       out.write("\n");
@@ -116,6 +116,9 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            \n");
       out.write("            \n");
       out.write("            <button type=\"submit\">View students list</button>\n");
+      out.write("               <input type=\"hidden\" value=\"");
+      out.print(gg);
+      out.write("\" name=\"gg\">\n");
       out.write("                    </form></td></tr>\n");
       out.write("             <tr><td> <form action=\"SAttend.jsp\">\n");
       out.write("            <button type=\"submit\">Student Attendance</button>\n");
@@ -130,7 +133,13 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print(gg);
       out.write("\" name=\"gg\">\n");
       out.write("        </form></td></tr>\n");
-      out.write("        <tr><td> <form action=\"stuUp.jsp\">\n");
+      out.write("       <tr><td> <form action=\"PaymentHome.jsp\">\n");
+      out.write("            <button type=\"submit\">Payment</button>\n");
+      out.write("             <input type=\"hidden\" value=\"");
+      out.print(gg);
+      out.write("\" name=\"gg\">\n");
+      out.write("        </form></td></tr>\n");
+      out.write("        <tr><td> <form action=\"Updatestu.jsp\">\n");
       out.write("            <button type=\"submit\">Student List Update</button>\n");
       out.write("             <input type=\"hidden\" value=\"");
       out.print(gg);

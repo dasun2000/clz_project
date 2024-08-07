@@ -71,27 +71,27 @@ and open the template in the editor.
            
              <tr><td> <form action="Home.jsp">
             <button type="submit">Grade 6</button>
-            <input type="hidden" value="6" name="gr">
+            <input type="hidden" value="6" name="gg">
         </form></td></tr>
        <tr><td> <form action="Home.jsp">
             <button type="submit">Grade 7</button>
-            <input type="hidden" value="7" name="gr">
+            <input type="hidden" value="7" name="gg">
         </form></td></tr>
         <tr><td> <form action="Home.jsp">
             <button type="submit">Grade 8</button>
-            <input type="hidden" value="8" name="gr">
+            <input type="hidden" value="8" name="gg">
         </form></td></tr>
         <tr><td> <form action="Home.jsp">
             <button type="submit">Grade 9</button>
-            <input type="hidden" value="9" name="gr">
+            <input type="hidden" value="9" name="gg">
         </form></td></tr>
         <tr><td> <form action="Home.jsp">
             <button type="submit">Grade 10</button>
-            <input type="hidden" value="10" name="gr">
+            <input type="hidden" value="10" name="gg">
         </form></td></tr>
         <tr><td> <form action="Home.jsp">
             <button type="submit">Grade 11</button>
-            <input type="hidden" value="11" name="gr">
+            <input type="hidden" value="11" name="gg">
         </form></td></tr>
        <tr><td> <form action="index.html">
             <button type="submit">Exit</button>

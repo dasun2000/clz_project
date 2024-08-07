@@ -33,10 +33,10 @@
         %>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Contact Number</td><td>Home Number</td></thead>
+                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Email</td><td>Contact Number</td><td>Home Number</td></thead>
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
             <%}%></table>
             <%}
             
@@ -51,7 +51,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
             <%}%></table>
             <%}
             
@@ -65,7 +65,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
             <%}%></table>
             <%}
             
@@ -80,7 +80,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
             <%}%></table>
             <%}
             
@@ -95,7 +95,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
             <%}%></table>
             <%}
             
@@ -111,7 +111,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
             <%}%></table>
             <%}
             
@@ -126,7 +126,7 @@
             
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
             <%}%></table>
             <%}
             
