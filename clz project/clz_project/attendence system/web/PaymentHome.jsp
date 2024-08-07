@@ -10,7 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <script>
+            function y() {
+    
+    return confirm("Are you sure?");
+}
+        </script>
         <style>
+            
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -90,8 +97,12 @@
             <button type="submit">Search Index</button>
                <input type="hidden" value="<%=gg%>" name="gg">
                     </form></td></tr>
-            <tr><td><form action="Student.jsp" method="post">
-            <button type="submit">Clear All Payment</button>
+            <tr><td><form action="ClearPay" method="post" name="clear" onsubmit="return y()">
+                        <button type="submit" >Clear All Payment</button>
+            <input type="hidden"  value="<%=gg%>" name="gg">
+                    </form></td></tr>
+            <tr><td><form action="Grade.jsp" method="post">
+            <button type="submit">Exit</button>
                <input type="hidden" value="<%=gg%>" name="gg">
                     </form></td></tr>
         

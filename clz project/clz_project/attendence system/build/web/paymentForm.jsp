@@ -21,6 +21,9 @@
             String sname=request.getParameter("sname");
             String date=request.getParameter("date");
         String gr=request.getParameter("gg");
+        
+            if (gr.equals("6"))
+            {
             Class.forName("com.mysql.jdbc.Driver");
             String url="jdbc:mysql://localhost:3306/attendence";
             Connection con=DriverManager.getConnection(url,"root","");
@@ -31,10 +34,96 @@
             ResultSet rs=st.executeQuery(q1);
             if (rs.next()){
             
-             String q3 = "INSERT INTO Payment (No, FirstName, LastName, Date, Payment) VALUES ('" + rs.getString("No") + "', '" + rs.getString("FirstName") + "', '" + rs.getString("LastName") + "', '" + date + "', 'Paid')";
+             String q3 = "INSERT INTO Payment6 (No, FirstName, LastName, Date, Payment) VALUES ('" + rs.getString("No") + "', '" + rs.getString("FirstName") + "', '" + rs.getString("LastName") + "', '" + date + "', 'Paid')";
             st.executeUpdate(q3);
             response.sendRedirect("Grade.jsp");
             }
+            }
+            else if (gr.equals("7"))
+            {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url="jdbc:mysql://localhost:3306/attendence";
+            Connection con=DriverManager.getConnection(url,"root","");
+            Statement st=con.createStatement();
+            
+            String q1="SELECT * FROM student7 WHERE No='"+sno+"' AND FirstName='"+sname+"'";
+            
+            ResultSet rs=st.executeQuery(q1);
+            if (rs.next()){
+            
+             String q3 = "INSERT INTO Payment7 (No, FirstName, LastName, Date, Payment) VALUES ('" + rs.getString("No") + "', '" + rs.getString("FirstName") + "', '" + rs.getString("LastName") + "', '" + date + "', 'Paid')";
+            st.executeUpdate(q3);
+            response.sendRedirect("Grade.jsp");
+            }
+            }
+            else if (gr.equals("8"))
+            {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url="jdbc:mysql://localhost:3306/attendence";
+            Connection con=DriverManager.getConnection(url,"root","");
+            Statement st=con.createStatement();
+            
+            String q1="SELECT * FROM student8 WHERE No='"+sno+"' AND FirstName='"+sname+"'";
+            
+            ResultSet rs=st.executeQuery(q1);
+            if (rs.next()){
+            
+             String q3 = "INSERT INTO Payment8 (No, FirstName, LastName, Date, Payment) VALUES ('" + rs.getString("No") + "', '" + rs.getString("FirstName") + "', '" + rs.getString("LastName") + "', '" + date + "', 'Paid')";
+            st.executeUpdate(q3);
+            response.sendRedirect("Grade.jsp");
+            }
+            }
+            else if (gr.equals("9"))
+            {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url="jdbc:mysql://localhost:3306/attendence";
+            Connection con=DriverManager.getConnection(url,"root","");
+            Statement st=con.createStatement();
+            
+            String q1="SELECT * FROM student9 WHERE No='"+sno+"' AND FirstName='"+sname+"'";
+            
+            ResultSet rs=st.executeQuery(q1);
+            if (rs.next()){
+            
+             String q3 = "INSERT INTO Payment9 (No, FirstName, LastName, Date, Payment) VALUES ('" + rs.getString("No") + "', '" + rs.getString("FirstName") + "', '" + rs.getString("LastName") + "', '" + date + "', 'Paid')";
+            st.executeUpdate(q3);
+            response.sendRedirect("Grade.jsp");
+            }
+            }
+            else if (gr.equals("10"))
+            {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url="jdbc:mysql://localhost:3306/attendence";
+            Connection con=DriverManager.getConnection(url,"root","");
+            Statement st=con.createStatement();
+            
+            String q1="SELECT * FROM student10 WHERE No='"+sno+"' AND FirstName='"+sname+"'";
+            
+            ResultSet rs=st.executeQuery(q1);
+            if (rs.next()){
+            
+             String q3 = "INSERT INTO Payment10 (No, FirstName, LastName, Date, Payment) VALUES ('" + rs.getString("No") + "', '" + rs.getString("FirstName") + "', '" + rs.getString("LastName") + "', '" + date + "', 'Paid')";
+            st.executeUpdate(q3);
+            response.sendRedirect("Grade.jsp");
+            }
+            }else if (gr.equals("11"))
+            {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url="jdbc:mysql://localhost:3306/attendence";
+            Connection con=DriverManager.getConnection(url,"root","");
+            Statement st=con.createStatement();
+            
+            String q1="SELECT * FROM student11 WHERE No='"+sno+"' AND FirstName='"+sname+"'";
+            
+            ResultSet rs=st.executeQuery(q1);
+            if (rs.next()){
+            
+             String q3 = "INSERT INTO Payment11 (No, FirstName, LastName, Date, Payment) VALUES ('" + rs.getString("No") + "', '" + rs.getString("FirstName") + "', '" + rs.getString("LastName") + "', '" + date + "', 'Paid')";
+            st.executeUpdate(q3);
+            response.sendRedirect("Grade.jsp");
+            }
+            }
+            
         %>
     </body>
 </html>

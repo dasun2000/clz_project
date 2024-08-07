@@ -27,13 +27,11 @@
            if (gr.equals("6"))
            {
         
-            String q1="SELECT * FROM Payment";
+            String q1="SELECT * FROM Payment6";
             
            
         %>
-       
-            
-           
+  
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
                 <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
                 <%ResultSet rs1=st.executeQuery(q1);
@@ -80,11 +78,7 @@
             {%>
             <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
-            
-            
-        
-        
-        
+
             <%}
             
             
