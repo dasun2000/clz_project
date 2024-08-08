@@ -13,135 +13,203 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Payment Unsuccess</title>
+         <link rel="stylesheet" type="text/css" href="style3.css">
     </head>
     <body>
-          <%
-            
-            String gr=request.getParameter("gg");
-            Class.forName("com.mysql.jdbc.Driver");
-            String url="jdbc:mysql://localhost:3306/attendence";
-            Connection con=DriverManager.getConnection(url,"root","");
-            Statement st=con.createStatement();
-           
-           if (gr.equals("6"))
-           {
-        
-            String q1="SELECT * FROM student6 WHERE NOT EXISTS ( SELECT * FROM Payment6 WHERE No = No)";
-            
-           
-        %>
-  
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td></thead>
-                <%ResultSet rs1=st.executeQuery(q1);
-                    while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td></tr>
-            <%}%></table>
+        <div class="student-list">
+            <h1>Unsuccessful Payments</h1>
+            <%
+                String gr = request.getParameter("gg");
+                Class.forName("com.mysql.jdbc.Driver");
+                String url = "jdbc:mysql://localhost:3306/attendence";
+                Connection con = DriverManager.getConnection(url, "root", "");
+                Statement st = con.createStatement();
 
-        <%}
-            
-            
-                else if (gr.equals("7"))
-           {
-           
-            String q1="SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment7 WHERE No = No)";
-            
-           
-        %>
-  
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td></thead>
-                <%ResultSet rs1=st.executeQuery(q1);
-                    while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td></tr>
-            <%}%></table>
-
-        <%}
-            
-                else if (gr.equals("8"))
-           {
-           
-            String q1="SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment8 WHERE No = No)";
-            
-           
-        %>
-  
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
-                <%ResultSet rs1=st.executeQuery(q1);
-                    while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td></tr>
-            <%}%></table>
-
-        <%}
-            
-            
-                else if (gr.equals("9"))
-           {
-           
-            String q1="SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment9 WHERE No = No)";
-            
-           
-        %>
-  
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
-                <%ResultSet rs1=st.executeQuery(q1);
-                    while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td></tr>
-            <%}%></table>
-
-        <%}
-            
-            
-                else if(gr.equals("10"))
-                   
-           {
-           
-            String q1="SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment10 WHERE No = No)";
-            
-           
-        %>
-  
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
-                <%ResultSet rs1=st.executeQuery(q1);
-                    while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td></tr>
-            <%}%></table>
-
-        <%}
-            
-            
-                else if(gr.equals("11"))
-           {
-           
-            String q1="SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment11 WHERE No = No)";
-            
-           
-        %>
-  
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
-                <%ResultSet rs1=st.executeQuery(q1);
-                    while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td></tr>
-            <%}%></table>
-
-        <%}
-            
-            
-            else{
-                   response.sendRedirect("Loger.html");
-                  
-                    }
+                if (gr.equals("6")) {
+                    String q1 = "SELECT * FROM student6 WHERE NOT EXISTS ( SELECT * FROM Payment6 WHERE No = No)";
+                    ResultSet rs1 = st.executeQuery(q1);
             %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        while (rs1.next()) {
+                    %>
+                    <tr>
+                        <td><%= rs1.getString("No") %></td>
+                        <td><%= rs1.getString("FirstName") %></td>
+                        <td><%= rs1.getString("LastName") %></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+            <%
+                } else if (gr.equals("7")) {
+                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment7 WHERE No = No)";
+                    ResultSet rs1 = st.executeQuery(q1);
+            %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        while (rs1.next()) {
+                    %>
+                    <tr>
+                        <td><%= rs1.getString("No") %></td>
+                        <td><%= rs1.getString("FirstName") %></td>
+                        <td><%= rs1.getString("LastName") %></td>
+                        <td><%= rs1.getString("Date") %></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+            <%
+                } else if (gr.equals("8")) {
+                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment8 WHERE No = No)";
+                    ResultSet rs1 = st.executeQuery(q1);
+            %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date</th>
+                        <th>Payment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        while (rs1.next()) {
+                    %>
+                    <tr>
+                        <td><%= rs1.getString("No") %></td>
+                        <td><%= rs1.getString("FirstName") %></td>
+                        <td><%= rs1.getString("LastName") %></td>
+                        <td><%= rs1.getString("Date") %></td>
+                        <td><%= rs1.getString("Payment") %></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+            <%
+                } else if (gr.equals("9")) {
+                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment9 WHERE No = No)";
+                    ResultSet rs1 = st.executeQuery(q1);
+            %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date</th>
+                        <th>Payment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        while (rs1.next()) {
+                    %>
+                    <tr>
+                        <td><%= rs1.getString("No") %></td>
+                        <td><%= rs1.getString("FirstName") %></td>
+                        <td><%= rs1.getString("LastName") %></td>
+                        <td><%= rs1.getString("Date") %></td>
+                        <td><%= rs1.getString("Payment") %></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+            <%
+                } else if (gr.equals("10")) {
+                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment10 WHERE No = No)";
+                    ResultSet rs1 = st.executeQuery(q1);
+            %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date</th>
+                        <th>Payment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        while (rs1.next()) {
+                    %>
+                    <tr>
+                        <td><%= rs1.getString("No") %></td>
+                        <td><%= rs1.getString("FirstName") %></td>
+                        <td><%= rs1.getString("LastName") %></td>
+                        <td><%= rs1.getString("Date") %></td>
+                        <td><%= rs1.getString("Payment") %></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+            <%
+                } else if (gr.equals("11")) {
+                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment11 WHERE No = No)";
+                    ResultSet rs1 = st.executeQuery(q1);
+            %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date</th>
+                        <th>Payment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        while (rs1.next()) {
+                    %>
+                    <tr>
+                        <td><%= rs1.getString("No") %></td>
+                        <td><%= rs1.getString("FirstName") %></td>
+                        <td><%= rs1.getString("LastName") %></td>
+                        <td><%= rs1.getString("Date") %></td>
+                        <td><%= rs1.getString("Payment") %></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+            <%
+                } else {
+                    response.sendRedirect("Loger.html");
+                }
+            %>
+        </div>
     </body>
 </html>

@@ -9,21 +9,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Payment Home</title>
+        <link rel="stylesheet" type="text/css" href="style2.css">
+        
         <script>
             function y() {
     
     return confirm("Are you sure?");
 }
         </script>
-        
+      
     </head>
     <body>
         <%
         String gg=request.getParameter("gg");
         
         %>
-        
+        <div class="admin-panel">
         <table><tr><td>
                     <h1>Welcome to Admin Panel</h1></td></tr>
             
@@ -53,6 +55,7 @@
             <button type="submit">Exit</button>
                <input type="hidden" value="<%=gg%>" name="gg">
                     </form></td></tr>
-        
+            </div>
+        </table>
     </body>
 </html>
