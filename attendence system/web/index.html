@@ -4,80 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="password"] {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #007bff;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 5px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        button[type="reset"] {
-            background-color: #6c757d;
-        }
-        button:hover {
-            opacity: 0.9;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
     <div class="container">
         <h1>Login</h1>
         <form name="f1" action="Admin" method="post">
             <div class="form-group">
-                <label for="user">UserName</label>
-                <input id="user" name="user" type="text" required>
+                
+                <input id="user" name="user" type="text" placeholder="Username" required>
             </div>
             <div class="form-group">
-                <label for="pws">Password</label>
-                <input id="pws" name="pws" type="password" required>
+                
+                <input id="pws" name="pws" type="password" placeholder="Password" required >
             </div>
-            <div class="form-group" style="text-align: center;">
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
+            <div class="form-actions">
+                <table><tr><td><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr></table>
             </div>
         </form>
     </div>

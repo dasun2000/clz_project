@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style1.css">
         <title>Update Student</title>
         <script>
             function x() {
@@ -43,7 +44,9 @@
         <%
             String grade = request.getParameter("gg");
         %>
+        <div class="container">
         <form action="Update.jsp" method="post" name="UpStu" onsubmit="return x()">
+            <h1>Update Student Details</h1>
             <table>
                 <tr>
                     <td><label>Enter Student No</label></td>
@@ -89,11 +92,13 @@
                 <tr>
                     <td><input type="hidden" value="<%= grade %>" name="gg"></td>
                 </tr>
-                <tr>
-                    <td><button type="submit">Submit</button></td>
-                    <td><button type="reset">Reset</button></td>
-                </tr>
+                
             </table>
+                <div class="form-actions">
+                <table>
+                <tr><td ><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr>
+            </table></div>
         </form>
+        </div>
     </body>
 </html>
