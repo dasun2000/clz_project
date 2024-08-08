@@ -9,6 +9,12 @@
 <html>
     <head><title>Admin Panel</title>
     <link rel="stylesheet" type="text/css" href="style2.css">
+    <script>
+        function y()
+        {
+            
+        }
+    </script>
     </head>
     <body>
          <%
@@ -37,8 +43,9 @@
                 <button type="submit">Student List Update</button>
                 <input type="hidden" value="<%=gg%>" name="gg">
             </form>
-            <form action="Grade.jsp" method="post">
-                <button type="submit">Exit</button>
+            
+            <form action="Grade.jsp" method="post" >
+                <button type="submit" style="background-color: #C00000;"  >Exit</button>
             </form>
         </div>
     </body>

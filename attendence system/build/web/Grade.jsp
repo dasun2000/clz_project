@@ -38,8 +38,12 @@ and open the template in the editor.
                 <button type="submit">Grade 11</button>
                 <input type="hidden" value="11" name="gg">
             </form>
+            <form action="UpdateAdmin.jsp" method="post" >
+                <button type="submit" style="background-color: #7D0DC3;" >Update Admin</button>
+                
+            </form>
             <form action="index.html" method="post">
-                <button type="submit">Exit</button>
+                <button type="submit" style="background-color: #C00000;"  >Exit</button>
             </form>
         </div>
             

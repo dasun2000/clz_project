@@ -54,7 +54,7 @@
             </table>
             <%
                 } else if (gr.equals("7")) {
-                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment7 WHERE No = No)";
+                    String q1 = "SELECT * FROM Student7 WHERE NOT EXISTS ( SELECT * FROM Payment7 WHERE No = No)";
                     ResultSet rs1 = st.executeQuery(q1);
             %>
             <table>
@@ -83,7 +83,7 @@
             </table>
             <%
                 } else if (gr.equals("8")) {
-                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment8 WHERE No = No)";
+                    String q1 = "SELECT * FROM Student8 WHERE NOT EXISTS ( SELECT * FROM Payment8 WHERE No = No)";
                     ResultSet rs1 = st.executeQuery(q1);
             %>
             <table>
@@ -114,7 +114,7 @@
             </table>
             <%
                 } else if (gr.equals("9")) {
-                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment9 WHERE No = No)";
+                    String q1 = "SELECT * FROM Student9 WHERE NOT EXISTS ( SELECT * FROM Payment9 WHERE No = No)";
                     ResultSet rs1 = st.executeQuery(q1);
             %>
             <table>
@@ -145,7 +145,7 @@
             </table>
             <%
                 } else if (gr.equals("10")) {
-                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment10 WHERE No = No)";
+                    String q1 = "SELECT * FROM Student10 WHERE NOT EXISTS ( SELECT * FROM Payment10 WHERE No = No)";
                     ResultSet rs1 = st.executeQuery(q1);
             %>
             <table>
@@ -176,7 +176,7 @@
             </table>
             <%
                 } else if (gr.equals("11")) {
-                    String q1 = "SELECT * FROM Students WHERE NOT EXISTS ( SELECT * FROM Payment11 WHERE No = No)";
+                    String q1 = "SELECT * FROM Student11 WHERE NOT EXISTS ( SELECT * FROM Payment11 WHERE No = No)";
                     ResultSet rs1 = st.executeQuery(q1);
             %>
             <table>
@@ -210,6 +210,9 @@
                     response.sendRedirect("Loger.html");
                 }
             %>
+            <form action="Grade.jsp" method="post" style="padding-top: 50px;">
+                <center> <button type="submit" style="background-color: #C00000;"  >Exit</button></center>
+            </form>
         </div>
     </body>
 </html>

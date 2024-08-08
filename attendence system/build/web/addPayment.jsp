@@ -25,10 +25,13 @@
                 <input type="date" id="date" name="date" required>
             </div>
             <input type="hidden" name="gg" value="<%= request.getParameter("gg") %>">
-            <div class="form-actions">
+            <div class="form-actions" style="padding-top: 10px;">
                 <table><tr><td><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr></table>
             </div>
         </form>
+            <form action="Grade.jsp" method="post" style="padding-top: 10px;">
+                <center> <button type="submit" style="background-color: #C00000;"  >Exit</button></center>
+            </form>
     </div>
 </body>
 </html>

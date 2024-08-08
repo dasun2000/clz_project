@@ -222,6 +222,9 @@
                     response.sendRedirect("Loger.html");
                 }
             %>
+            <form action="Grade.jsp" method="post" style="padding-top: 50px;">
+                <center> <button type="submit" style="background-color: #C00000;"  >Exit</button></center>
+            </form>
         </div>
     </body>
 </html>

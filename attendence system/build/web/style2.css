@@ -5,7 +5,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-image: url('Image/login.jpg');
+            background-image: url('b1.jpg');
             background-size: cover;
             background-position: center;
             background-color: blanchedalmond;
@@ -55,4 +55,27 @@
             font-size: 14px;
             color: #333;
         }
+        .exit
+{
+    background-color: red;
+    
+}
+.exit:hover{
+    background-color: #800000;
+}
 
+ button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 150px;
+            
+        }

@@ -52,7 +52,7 @@
             <input type="hidden"  value="<%=gg%>" name="gg">
                     </form></td></tr>
             <tr><td><form action="Grade.jsp" method="post">
-            <button type="submit">Exit</button>
+            <button type="submit" style="background-color: #C00000;"  >Exit</button>
                <input type="hidden" value="<%=gg%>" name="gg">
                     </form></td></tr>
             </div>

@@ -1,15 +1,15 @@
 
             body {
                 font-family: Arial, sans-serif;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
-                background-image: url('Image/login.jpg');
-                background-size: cover;
-                background-position: center;
-                background-color: blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('b1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: blanchedalmond;
             }
 
             .student-list {
@@ -89,5 +89,20 @@
             .payment-list table tr:nth-child(even) {
                 background-color: #151B54;
             }
+ button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 150px;
+            
+        }
 
         
