@@ -22,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label for="date">Date</label>
-                <input type="date" id="date" name="date" required>
+                <center><input style="width: 150px; height: 20px;" type="date" id="date" name="date"  required></center>
             </div>
             <input type="hidden" name="gg" value="<%= request.getParameter("gg") %>">
             <div class="form-actions" style="padding-top: 10px;">
