@@ -38,7 +38,7 @@
     </script>
 </head>
 <body>
-    <div class="container" >
+    <div class="container" style="padding-left: 50px; padding-right: 50px;">
         
         <form name="AddStu" action="addstudent.jsp" method="post" onsubmit="return validateForm()" >
             <h1>Student Registration Form</h1>
@@ -72,10 +72,10 @@
             </div>
             <input type="hidden" name="grade" value="<%= request.getParameter("gg") %>">
             <div class="form-actions" style="padding-top: 0px; padding-bottom: 0px;">
-                <table><tr><td><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr></table>
+                <center><table><tr><td><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr></table></center>
             </div>
         </form>
-            <form action="Grade.jsp" method="post" style="padding-top: 2px;">
+            <form action="Grade.jsp" method="post" style="padding-top: 0px;">
                 <center> <button type="submit" style="background-color: #C00000;"  >Exit</button></center>
             </form>
     </div>

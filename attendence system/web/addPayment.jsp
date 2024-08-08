@@ -9,7 +9,7 @@
     
 </head>
 <body>
-    <div class="container">
+<center><div class="container" style="padding-left: 15px; padding-right: 15px;">
         <h1>Add Payment</h1>
         <form action="paymentForm.jsp" method="post">
             <div class="form-group">
@@ -26,12 +26,12 @@
             </div>
             <input type="hidden" name="gg" value="<%= request.getParameter("gg") %>">
             <div class="form-actions" style="padding-top: 10px;">
-                <table><tr><td><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr></table>
+                <center><table><tr><td><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr></table></center>
             </div>
         </form>
             <form action="Grade.jsp" method="post" style="padding-top: 10px;">
                 <center> <button type="submit" style="background-color: #C00000;"  >Exit</button></center>
             </form>
-    </div>
+    </div></center>
 </body>
 </html>

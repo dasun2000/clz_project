@@ -10,24 +10,22 @@
     
 </head>
 <body>
-    <div class="container">
+<center><div class="container">
         <h1>Search Index</h1>
         <form action="Isearch.jsp" method="post">
             <table>
-                <tr><input type="text" name="index" placeholder="Enter search index"></tr>
-                <input type="hidden" name="gg" value="<%= request.getParameter("gg") %>">
+                <tr><input type="text" name="index" placeholder="Enter search index" style="height: 45px;"></tr>
+                <input type="hidden" name="gg" value="<%= request.getParameter("gg") %>" required>
             </table>
             <div class="form-actions">
-                <table>
+                <center> <table>
                 <tr><td ><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr>
-            </table></div>
-            
-            
-            
+                    </table></center></div>
+   
         </form>
-            <form action="Grade.jsp" method="post" style="padding-top: 10px;">
+            <form action="Grade.jsp" method="post" style="padding-top: 5px;">
                 <center> <button type="submit" style="background-color: #C00000;"  >Exit</button></center>
             </form>
-    </div>
+    </div></center>
 </body>
 </html>

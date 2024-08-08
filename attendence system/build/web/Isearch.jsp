@@ -13,6 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style2.css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -27,7 +28,7 @@
            if (gr.equals("6"))
            {
         
-            String q1="SELECT * FROM payment WHERE No='"+index+"'";
+            String q1="SELECT * FROM payment6 WHERE No='"+index+"'";
             ResultSet rs1=st.executeQuery(q1);
            
         %>
@@ -41,46 +42,35 @@
             <%}
             
             
-                else if (gr.equals("7"))
+               else if (gr.equals("7"))
            {
+        
+            String q1="SELECT * FROM payment7 WHERE No='"+index+"'";
+            ResultSet rs1=st.executeQuery(q1);
            
-            String q2="SELECT * FROM student7";
-            ResultSet rs1=st.executeQuery(q2);%>
+        %>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
             <%}
             
                 else if (gr.equals("8"))
            {
            
-            String q3="SELECT * FROM student8";
-            ResultSet rs1=st.executeQuery(q3);%>
-            
-            <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
-                <%while (rs1.next())
-            {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
-            <%}%></table>
-            <%}
-            
-            
-            else if(gr.equals("8"))
-           {
+           String q1="SELECT * FROM payment8 WHERE No='"+index+"'";
+            ResultSet rs1=st.executeQuery(q1);
            
-            String q4="SELECT * FROM student8";
-            ResultSet rs1=st.executeQuery(q4);%>
+        %>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
             <%}
             
@@ -88,14 +78,16 @@
                 else if (gr.equals("9"))
            {
            
-            String q5="SELECT * FROM student9";
-            ResultSet rs1=st.executeQuery(q5);%>
+            String q1="SELECT * FROM payment9 WHERE No='"+index+"'";
+            ResultSet rs1=st.executeQuery(q1);
+           
+        %>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
             <%}
             
@@ -104,14 +96,16 @@
                    
            {
            
-            String q6="SELECT * FROM student10";
-            ResultSet rs1=st.executeQuery(q6);%>
+            String q1="SELECT * FROM payment10 WHERE No='"+index+"'";
+            ResultSet rs1=st.executeQuery(q1);
+           
+        %>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
             <%}
             
@@ -119,14 +113,16 @@
                 else if(gr.equals("11"))
            {
            
-            String q7="SELECT * FROM student11";
-            ResultSet rs1=st.executeQuery(q7);%>
+            String q1="SELECT * FROM payment11 WHERE No='"+index+"'";
+            ResultSet rs1=st.executeQuery(q1);
+           
+        %>
             
             <table border="1" style="width: 100%; height: 100%; border-collapse: collapse;"  >
-            
+                <thead><td>No</td><td>First Name</td><td>Last Name</td><td>Date</td><td>Payment</td></thead>
                 <%while (rs1.next())
             {%>
-            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Address")%></td><td><%=rs1.getString("Email")%></td><td><%=rs1.getString("Phone")%></td><td><%=rs1.getString("Home Number")%></td></tr>
+            <tr><td><center><%=rs1.getString("No")%></center></td><td><%=rs1.getString("FirstName")%></td><td><center><%=rs1.getString("LastName")%></center></td><td><%=rs1.getString("Date")%></td><td><%=rs1.getString("Payment")%></td></tr>
             <%}%></table>
             <%}
             
