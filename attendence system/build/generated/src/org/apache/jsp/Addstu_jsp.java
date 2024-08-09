@@ -81,7 +81,7 @@ public final class Addstu_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </script>\n");
       out.write("</head>\n");
       out.write("<body>\n");
-      out.write("    <div class=\"container\"  >\n");
+      out.write("    <div class=\"container\" style=\"padding-left: 50px; padding-right: 50px;\">\n");
       out.write("        \n");
       out.write("        <form name=\"AddStu\" action=\"addstudent.jsp\" method=\"post\" onsubmit=\"return validateForm()\" >\n");
       out.write("            <h1>Student Registration Form</h1>\n");
@@ -117,10 +117,10 @@ public final class Addstu_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print( request.getParameter("gg") );
       out.write("\">\n");
       out.write("            <div class=\"form-actions\" style=\"padding-top: 0px; padding-bottom: 0px;\">\n");
-      out.write("                <table><tr><td><button type=\"submit\">Submit</button></td><td style=\"padding-left: 50px;\"><button type=\"reset\">Reset</button></td></tr></table>\n");
+      out.write("                <center><table><tr><td><button type=\"submit\">Submit</button></td><td style=\"padding-left: 50px;\"><button type=\"reset\">Reset</button></td></tr></table></center>\n");
       out.write("            </div>\n");
       out.write("        </form>\n");
-      out.write("            <form action=\"Grade.jsp\" method=\"post\" style=\"padding-top: 2px;\">\n");
+      out.write("            <form action=\"Grade.jsp\" method=\"post\" style=\"padding-top: 0px;\">\n");
       out.write("                <center> <button type=\"submit\" style=\"background-color: #C00000;\"  >Exit</button></center>\n");
       out.write("            </form>\n");
       out.write("    </div>\n");

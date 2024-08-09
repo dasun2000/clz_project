@@ -112,3 +112,6 @@ h3 {
     text-align: center;
     color: red;
 }
+select{
+    width: 60px;
+}

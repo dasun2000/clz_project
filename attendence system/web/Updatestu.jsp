@@ -55,7 +55,7 @@
                 <tr>
                     <td><label>What do you want</label></td>
                     <td>
-                        <select name="update">
+                        <select name="update" style="width: 250px; height: 25px; text-align: center; font-weight: bold;">
                             <option value="">Select</option>
                             <option value="update">Update</option>
                             <option value="delete">Delete</option>
@@ -95,9 +95,9 @@
                 
             </table>
                 <div class="form-actions">
-                <table>
+                    <center><table>
                 <tr><td ><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr>
-            </table></div>
+                        </table></center></div>
         </form>
                 <form action="Grade.jsp" method="post" style="padding-top: 10px;">
                 <center> <button type="submit" style="background-color: #C00000;"  >Exit</button></center>

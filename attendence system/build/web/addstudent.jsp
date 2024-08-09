@@ -34,37 +34,50 @@
             if(grade.equals("6"))
             { 
             String q1="INSERT INTO student6 VALUES('"+no+"','"+fn+"','"+ln+"','"+Add+"','"+em+"','"+pno+"','"+hno+"')";
+            String q2="INSERT INTO attendance6 (No) VALUES ('"+no+"')";
+            st.executeUpdate(q2);
             st.executeUpdate(q1);
+            
              response.sendRedirect("Grade.jsp");
             }
             else if(grade.equals("7"))
             {
               String q1="INSERT INTO student7 VALUES('"+no+"','"+fn+"','"+ln+"','"+Add+"','"+em+"','"+pno+"','"+hno+"')";
               st.executeUpdate(q1);
+              String q2="INSERT INTO attendance7 (No) VALUES ('"+no+"')";
+            st.executeUpdate(q2);
               response.sendRedirect("Grade.jsp");
             }
              else if(grade.equals("8"))
             {
               String q2="INSERT INTO student8 VALUES('"+no+"','"+fn+"','"+ln+"','"+Add+"','"+em+"','"+pno+"','"+hno+"')";
               st.executeUpdate(q2);
+              String q3="INSERT INTO attendance8 (No) VALUES ('"+no+"')";
+            st.executeUpdate(q3);
               response.sendRedirect("Student.jsp");
             }
              else if(grade.equals("9"))
             {
               String q3="INSERT INTO student9 VALUES('"+no+"','"+fn+"','"+ln+"','"+Add+"','"+em+"','"+pno+"','"+hno+"')";
               st.executeUpdate(q3);
+              String q2="INSERT INTO attendance9 (No) VALUES ('"+no+"')";
+            st.executeUpdate(q2);
               response.sendRedirect("Student.jsp");
             }
              else if(grade.equals("10"))
             {
               String q4="INSERT INTO student10 VALUES('"+no+"','"+fn+"','"+ln+"','"+Add+"','"+em+"','"+pno+"','"+hno+"')";
               st.executeUpdate(q4);
+              String q2="INSERT INTO attendance10 (No) VALUES ('"+no+"')";
+            st.executeUpdate(q2);
               response.sendRedirect("Student.jsp");
             }
              else if(grade.equals("11"))
             {
               String q5="INSERT INTO student11 VALUES('"+no+"','"+fn+"','"+ln+"','"+Add+"','"+em+"','"+pno+"','"+hno+"')";
               st.executeUpdate(q5);
+              String q2="INSERT INTO attendance11 (No) VALUES ('"+no+"')";
+            st.executeUpdate(q2);
               response.sendRedirect("Student.jsp");
             }
             else

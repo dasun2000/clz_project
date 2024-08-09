@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Attendance Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style1.css">
+    </head>
+    <body>
+       <div class="container">
+        <form action="AttendDetails.jsp" method="post" name="UpStu" onsubmit="return x()">
+            <h1>Mark your Attendance Here</h1>
+            <table>
+                <tr>
+                    <td><label>Enter Index No</label></td>
+                    <td><input type="text" name="index" required></td>
+                </tr>
+                <tr>
+                    <td><label>Select your Grade</label></td>
+                    <td>
+                        <select name="grade" style="width: 150px; height: 28px; text-align: center; font-weight: bold; border-radius: 5px;" required>
+                            <option value="">Select</option>
+                            <option value="6">Grade 6</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+                <div class="form-actions">
+                    <center><table>
+                <tr><td ><button type="submit">Submit</button></td><td style="padding-left: 50px;"><button type="reset">Reset</button></td></tr>
+                        </table></center></div>
+        </form>
+                
+        </div>
+    </body>
+</html>

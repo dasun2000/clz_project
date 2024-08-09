@@ -27,7 +27,7 @@
                 <button type="submit">View students list</button>
                 <input type="hidden" value="<%=gg%>" name="gg">
             </form>
-            <form action="SAttend.jsp" method="post">
+            <form action="AttendHome.jsp" method="post">
                 <button type="submit">Student Attendance</button>
                 <input type="hidden" value="<%=gg%>" name="gg">
             </form>
