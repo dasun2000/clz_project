@@ -77,61 +77,53 @@ public class AGenerate extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            //processRequest(request, response);
-            String grade=request.getParameter("gg");
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    Connection con = null;
+    Statement st1 = null;
+    Statement st2 = null;
+    Statement st = null;
+    ResultSet rs1 = null;
+    ResultSet rs2 = null;
+    
+    try {
+        String grade = request.getParameter("gg");
+        Class.forName("com.mysql.jdbc.Driver");
+        String url = "jdbc:mysql://localhost:3306/Attendence";
+        con = DriverManager.getConnection(url, "root", "");
+        
+        st1 = con.createStatement();
+        st2 = con.createStatement();
+        st = con.createStatement();
 
-            Class.forName("com.mysql.jdbc.Driver");
-            String url="jdbc:mysql://localhost:3306/Attendence";
-            Connection con;
+        if ("6".equals(grade)) {
+            String q1 = "SELECT * FROM student6";
+            String q2 = "SELECT * FROM Tmpattend6";
             
-                con = DriverManager.getConnection(url,"root","");
-                
-            Statement st1=con.createStatement();
-            Statement st2=con.createStatement();
-            Statement st=con.createStatement();
-
-            if(grade.equals("6"))
-            {
-                String q1="SELECT * FROM student6";
-                String q2="SELECT * FROM Tmpattend6";
-  
-                ResultSet rs1=st1.executeQuery(q1);
-                ResultSet rs2=st2.executeQuery(q2);
-               
-                
-                while (rs2.next())
-                {
-                    while (rs1.next())
-                    {
-                        if (rs1.getString("No").equals(rs2.getString("No")))
-                        {
-                            String q="ALTER TABLE attendance6 ADD COLUMN '"+rs2.getString("Date")+"' INT(5)";
-                            st.executeUpdate(q);
-                            String q3 = "UPDATE attendance6 SET '"+rs2.getString("Date")+"' = '1' WHERE No = '" + rs2.getString("No") + "'";
-                            st2.executeUpdate(q3);
-                            response.sendRedirect("Home.jsp");
-
-                        }
-                        /*else
-                        {
-                            String q5 = "UPDATE attendance6 SET Attendance = '0' WHERE No = '" + rs2.getString("No") + "'";
-                            st2.executeUpdate(q5);
-                        }*/
+            rs1 = st1.executeQuery(q1);
+            rs2 = st2.executeQuery(q2);
+            
+            while (rs2.next()) {
+                while (rs1.next()) {
+                    if (rs1.getString("No").equals(rs2.getString("No"))) {
+                        String date = rs2.getString("Date").replaceAll("[^a-zA-Z0-9]","_"); // Safely format column names
+                        String q = "ALTER TABLE attendance6 ADD COLUMN `" + date + "` INT(5)";
+                        st.executeUpdate(q);
+                        String q3 = "UPDATE attendance6 SET '" + date + "' = 1 WHERE No = '" + rs2.getString("No") + "'";
+                        st.executeUpdate(q3);
+                        response.sendRedirect("Home.jsp");
+                        return; // Ensure redirection happens once
                     }
                 }
-                
+                rs1.beforeFirst(); 
             }
-            
-            
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(AGenerate.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(AGenerate.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+    } catch (ClassNotFoundException | SQLException ex) {
+        Logger.getLogger(AGenerate.class.getName()).log(Level.SEVERE, null, ex);
+        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "An error occurred: " + ex.getMessage());
+    } 
+}
+
 
     /**
      * Returns a short description of the servlet.
